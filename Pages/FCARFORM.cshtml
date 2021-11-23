@@ -1,0 +1,145 @@
+@page
+@model FCARFORMModel
+@{
+    ViewData["Title"] = "FCAR FORM";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Faculty Course Assessment Report</h1>
+</div>
+
+
+<h4>ABET Assessment Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="text-danger"></div>
+
+            <table>
+                <tr>
+                    <td>
+            <div class="form-group">
+                <label class="control-label">Course</label>
+                <input type="text" value="CIDM 4390" readonly>
+            </div>
+                </td>
+
+                <td>
+            <div class="form-group">
+                <label  class="control-label">Semesters</label>
+                <select id="Semesters">
+                <option value="Fall">Fall</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer 1">Summer 1</option>
+                <option value="Summer 2">Summer 2</option>
+                </select>
+            </div>
+            </td>
+
+            <td>
+            <div class="form-group">
+                <label  class="control-label">Year</label>
+                <select id="Years">
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                </select>
+            </div>
+            </td>
+                </tr>
+
+            <tr width="200px">
+                <td>
+            <div class="form-group">
+                <label  class="control-label">Intructor</label>
+                 <select id="Intructors">
+                <option value="Babb">Dr. Babb</option>
+                <option value="Dana">Dr. Dana</option>
+                <option value="Humphrey">Dr. Humphrey</option>
+                </select>
+            </div>
+            </td>
+            </tr>
+
+            </table>
+
+
+            <div class="form-group">
+                <label  class="control-label">Course Coordinator</label>
+                <input  class="form-control" placeholder = "If you are unsure, leave this blank" />
+                <span  class="text-danger"></span>
+            </div>
+            <style>
+                .form-control1 {
+                    height: 120px;
+                    width: 600px;
+                    word-wrap: break-word;
+                    border-style: groove;
+                }
+            </style>
+
+            <div class="form-group1">
+                <label  class="control-label">Catalog Description</label><br>
+                <textarea  class="form-control1" placeholder="Use the catalog description for your course for AY2016-2017 (you can find them here - http://catalog.wtamu.edu/content.php?catoid=10&navoid=779)"></textarea>
+                <span  class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+            <label  class="control-label"> Grade Distribution</label>
+        <table>
+
+            <style>
+                table,th,td,tr {
+                border:1px solid black;
+                padding: 10px;
+                text-align: Left;
+                text-color: black;
+                background: white;
+                }
+            </style>
+
+          <tr>
+            <td></td> <td><b>A</b></td> <td><b>B</b></td> <td><b>C</b></td> <td><b>D</b></td> <td><b>F</b></td> <td><b>X</b></td> <td><b>Total</b></td>
+          </tr>
+          <tr>
+            <td>Entire Class</td><td><input class="form-control form-control-sm" type="text"/></td><td><input class="form-control form-control-sm" type="text"/></td><td><b>n</b></td><td><b>n</b></td><td><b>n</b></td><td><b>n</b></td><td><b>m</b></td>
+          </tr>
+          <tr>
+            <td>(This is include where applicable) CIDM Majors only</td><td><input class="form-control form-control-sm" type="text"/></td><td><b>n</b></td><td><b>n</b></td><td><b>n</b></td><td><b>n</b></td><td><b>n</b></td><td><b>m</b></td>
+          </tr>
+        </table>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Modifications Made to the Course</label>
+                <textarea  class="form-control1" placeholder="Please list any changes made to the course during this assessment period.  These would have been changes we decided upon during the previous academic year’s evaluation meeting."></textarea>
+                <span  class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Student Feedback </label><br>
+               <textarea  class="form-control1" placeholder="Please share your direct and indirect observations you’ve gather from your interactions with students throughout the semester.  As we are not always able to use the data that accompanies the CIEQ information, we utilize our own reflections based on either direct student interaction or indirect observation."></textarea>
+                <span  class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label">Reflection</label><br>
+                <textarea  class="form-control1" placeholder="These are your own reflections on the delivery of the course for the period reported.  Please be thoughtful and elaborate with information that would be useful for our annual evaluation meeting where we plan future improvements to courses and the curriculum overall."></textarea>
+                <span  class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label1">Proposed Actions for Course Improvement</label>
+                <textarea  class="form-control1" placeholder="Based on your reflection and your own analysis of assessment data, what are suggested improvements for this course, and its impact on both the program and overall student attainment of our Student Outcomes at the program level."></textarea>
+                <span  class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="FCARFORM">Back to List</a>
+</div>
